@@ -8,7 +8,7 @@
     background: #fff;
   }
   
-  .container {
+  .containers {
     display: flex;
     flex-direction: column;
     position: relative;
