@@ -1,10 +1,29 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FaGoogle } from 'react-icons/fa';
+
 import { AuthContext } from "../../Provider/AuthProviders";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../../firebase/firebase.config";
 
 const Login = () => {
     const { signIn } = useContext(AuthContext)
     const navigate = useNavigate();
+
+    const auth = getAuth(app)
+    const provider = new GoogleAuthProvider();
+
+    const handleGoogleSignIn = () => {
+        signInWithPopup(auth, provider)
+        .then(result => {
+            const user = result.user;
+            console.log(user)
+            navigate('/')
+        })
+        .catch(error => {
+            console.log(error.message)
+        })
+    }
 
     const handleLogin = event => {
         event.preventDefault();
@@ -55,8 +74,8 @@ const Login = () => {
                         New to Authmaster ? Please Register
                     </Link>
                 </p>
+                <button onClick={handleGoogleSignIn} className='btn btn-success mx-10 mb-4 flex items-center gap-5' ><FaGoogle /> Login With Google</button>
                 </form>
-                
             </div>
         </div>
     </div>
