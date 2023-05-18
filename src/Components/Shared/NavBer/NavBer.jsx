@@ -22,7 +22,7 @@ const NavBer = () => {
     <li><Link to="/">Home</Link> </li>
     <li> <Link to="/">All Toys</Link> </li>
     <li> <Link to="/">My Toys</Link> </li>
-    <li> <Link to="/">Add A Toy</Link> </li>
+    <li> <Link to="/addToy">Add A Toy</Link> </li>
     <li> <Link to="/">Blogs</Link> </li>
     
     {user?.email ? <>
@@ -33,7 +33,7 @@ const NavBer = () => {
     }
   </>
   return (
-    <div className="navbar max-w-6xl	mx-auto bg-red-100  p-5  h-20 ">
+    <div className="navbar max-w-7xl	mx-auto bg-red-100  p-5  h-20 ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

@@ -4,7 +4,7 @@ import Tabs from "./Tabs/Tabs";
 
 const Home = () => {
     return (
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
             <Banner></Banner>
             <Gellary></Gellary>
             <Tabs></Tabs>
