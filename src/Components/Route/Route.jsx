@@ -3,7 +3,7 @@ import Main from "../Layouts/Main";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
-import Banner from "../Pages/Banner/Banner";
+import Home from "../Pages/Home/Home";
 
 const router = createBrowserRouter([
     {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
       children: [
         {
           path: '/' ,
-          element: <Banner></Banner>
+          element: <Home></Home>
         } ,
         {
           path: '/register' ,

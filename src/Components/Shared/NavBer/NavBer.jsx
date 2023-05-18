@@ -33,7 +33,7 @@ const NavBer = () => {
     }
   </>
   return (
-    <div className="navbar bg-slate-300  p-5  h-20 ">
+    <div className="navbar max-w-6xl	mx-auto bg-red-100  p-5  h-20 ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -58,13 +58,13 @@ const NavBer = () => {
       </div>
      <div className='gap-10'>
      {user?.email ? <>
-        <div className="tooltip flex justify-between items-center ml-16 " data-tip={user && user.displayName}>
-           <img className='rounded-xl h-10 w-10' src={user.photoURL} alt="" />
-        <Link to= '/login' className="navbar-end"><button onClick={handleLogOut} className="btn btn-outline btn-warning">Log Out</button> </Link>
+        <div className="tooltip  tooltip-left flex justify-between items-center ml-16 " data-tip={user && user.displayName}>
+           <img className='rounded-xl h-10 w-20' src={user.photoURL} alt="" />
           </div>
+        <Link to= '/login' className="navbar-end"><button onClick={handleLogOut} className="btn btn-warning">Log Out</button> </Link>
       </>
         : <Link to= '/login' className="navbar-end">
-        <button className="btn btn-outline btn-warning">Login</button>
+        <button className="btn  btn-warning">Login</button>
         </Link>
       }
      </div>
