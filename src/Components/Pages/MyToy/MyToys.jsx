@@ -15,7 +15,7 @@ const MyToys = () => {
 
                 setToys(data);
             });
-    }, [user ]);
+    }, [user]);
 
 
 
@@ -64,7 +64,7 @@ const MyToys = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            
+
                             <th>Toy Name</th>
                             <th>Sub-category</th>
                             <th>Price</th>
@@ -74,11 +74,12 @@ const MyToys = () => {
                     </thead>
                     <tbody>
                         {
-                            toys?.map((toy , index) => <MyToyRow
+                            toys.map((toy , index) => <MyToyRow
                             key={toy._id}
                             index={index}
-                            toy= {toy}
+                            toy={toy}
                             handleDelete={handleDelete}
+
                             ></MyToyRow>)
                         }
 
