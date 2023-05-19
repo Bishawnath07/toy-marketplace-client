@@ -7,7 +7,6 @@ const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [toys, setToys] = useState([]);
     const [control, setControl] = useState(false);
-    console.log(user)
 
     useEffect(() => {
         fetch(`http://localhost:5000/myToys/${user?.email}`)
@@ -17,6 +16,24 @@ const MyToys = () => {
                 setToys(data);
             });
     }, [user, control]);
+
+    const handleDelete = id => {
+        const proceed = confirm('Are You sure you want to delete');
+        if (proceed) {
+            fetch(`http://localhost:5000/myToys/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        alert('deleted successful');
+                        const remaining = toys.filter(toy => toy._id !== id);
+                        setToys(remaining);
+                    }
+                })
+        }
+    }
 
 
 
@@ -28,12 +45,12 @@ const MyToys = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Seller Name</th>
+                            
                             <th>Toy Name</th>
                             <th>Sub-category</th>
                             <th>Price</th>
                             <th>Available Quantity</th>
-                            <th>View Details</th>
+                            <th>Delete or Update</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,6 +59,7 @@ const MyToys = () => {
                             key={toy.id}
                             index = {index}
                             toy= {toy}
+                            handleDelete={handleDelete}
                             ></MyToyRow>)
                         }
 

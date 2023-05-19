@@ -21,12 +21,11 @@ const NavBer = () => {
   const navItems = <>
     <li><Link to="/">Home</Link> </li>
     <li> <Link to="/allToys">All Toys</Link> </li>
-    <li> <Link to="/myToys">My Toys</Link> </li>
     <li> <Link to="/addToy">Add A Toy</Link> </li>
     <li> <Link to="/">Blogs</Link> </li>
     
     {user?.email ? <>
-      <li><Link to="/appointments">My Toys</Link></li>
+      <li><Link to="/myToys">My Toys</Link></li>
       
     </>
       : <li> <Link to="/login"></Link> </li>
