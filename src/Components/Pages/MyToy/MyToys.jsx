@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProviders";
 import MyToyRow from "./MyToyRow";
+import Swal from "sweetalert2";
 
 const MyToys = () => {
 
@@ -18,21 +19,37 @@ const MyToys = () => {
     }, [user, control]);
 
     const handleDelete = id => {
-        const proceed = confirm('Are You sure you want to delete');
-        if (proceed) {
-            fetch(`http://localhost:5000/myToys/${id}`, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    if (data.deletedCount > 0) {
-                        alert('deleted successful');
-                        const remaining = toys.filter(toy => toy._id !== id);
-                        setToys(remaining);
-                    }
+        console.log(id);
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/myToys/${id}`, {
+                    method: 'DELETE'
                 })
-        }
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Coffee has been deleted.',
+                                'success'
+                            )
+                            const remaining = toys.filter(toy => toy._id !== id);
+                            setToys(remaining);
+                        }
+                    })
+
+            }
+        })
     }
 
 
