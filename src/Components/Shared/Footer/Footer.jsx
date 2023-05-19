@@ -2,8 +2,8 @@ import img from '../NavBer/image/a6bc59dd3d2c02e80c45e6eb64b439d5-toys-shop-logo
 
 const Footer = () => {
     return (
-        <footer className=' bg-base-400'>
-        <div  className="footer p-10 grid grid-cols-3 text-base-content">
+        <footer className='mt-10 '>
+        <div  className="bg-base-200 footer p-10 grid grid-cols-3 text-base-content">
         <div>
           <span className="footer-title">Services</span> 
           <a className="link link-hover">Rangpur</a> 

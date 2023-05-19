@@ -10,7 +10,7 @@ const AllToyRow = ({toy , index}) => {
                             <td>{category}</td>
                             <td>{price}</td>
                             <td>{quantity}</td>
-                            <td>view details</td>
+                            <td><button className="btn">view details</button></td>
                         </tr>
     );
 };
