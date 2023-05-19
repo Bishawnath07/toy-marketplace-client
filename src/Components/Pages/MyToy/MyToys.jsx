@@ -7,7 +7,6 @@ const MyToys = () => {
 
     const { user } = useContext(AuthContext);
     const [toys, setToys] = useState([]);
-    const [control, setControl] = useState(false);
 
     useEffect(() => {
         fetch(`http://localhost:5000/myToys/${user?.email}`)
@@ -16,7 +15,9 @@ const MyToys = () => {
 
                 setToys(data);
             });
-    }, [user, control]);
+    }, [user ]);
+
+
 
     const handleDelete = id => {
         console.log(id);
@@ -54,9 +55,10 @@ const MyToys = () => {
 
 
 
+
     return (
         <div>
-            <h3 className="text-4xl text-center my-8">Here are all toys: {toys.length}</h3>
+            <h3 className="text-4xl text-center my-8">You have added {toys.length} pieces toys</h3>
             <div className="overflow-x-auto">
                 <table className="table table-compact w-full">
                     <thead>
@@ -72,9 +74,9 @@ const MyToys = () => {
                     </thead>
                     <tbody>
                         {
-                            toys?.map((toy, index) => <MyToyRow
-                            key={toy.id}
-                            index = {index}
+                            toys?.map((toy , index) => <MyToyRow
+                            key={toy._id}
+                            index={index}
                             toy= {toy}
                             handleDelete={handleDelete}
                             ></MyToyRow>)

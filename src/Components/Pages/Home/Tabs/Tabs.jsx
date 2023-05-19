@@ -70,7 +70,7 @@ function Tabs() {
                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 m-16">
                {
                     toys.map(toy => <Toy
-                    key={toy.id}
+                    key={toy._id}
                     toy= {toy}
                     ></Toy>)
                 }
