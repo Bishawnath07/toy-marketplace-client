@@ -9,7 +9,9 @@ const ToyGallery = () => {
     return (
         <div>
             <div className='max-w-6xl md:mx-auto mx-10 my-10'>
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-6 ">
+            <div className="grid grid-cols-2 gap-8 md:grid-cols-6 "  data-aos="fade-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
             <div className="">
                 <div className=" rounded">
                     <img  src={img1} />
