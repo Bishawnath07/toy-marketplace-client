@@ -8,7 +8,7 @@ const AllToys = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/myToys').then(res => res.json()).then(data => setToys(data))
+        fetch('http://localhost:5000/myAllToys').then(res => res.json()).then(data => setToys(data))
     }, [])
 
     const handleSearch = () => {

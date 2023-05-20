@@ -7,6 +7,7 @@ const MyToys = () => {
 
     const { user } = useContext(AuthContext);
     const [toys, setToys] = useState([]);
+    console.log(toys)
 
     useEffect(() => {
         fetch(`http://localhost:5000/myToys/${user?.email}`)
@@ -32,7 +33,7 @@ const MyToys = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/myToys/${id}`, {
+                fetch(`http://localhost:5000/myAllToys/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -52,6 +53,8 @@ const MyToys = () => {
             }
         })
     }
+       
+    
 
 
 
@@ -79,12 +82,10 @@ const MyToys = () => {
                             index={index}
                             toy={toy}
                             handleDelete={handleDelete}
-
+                           
                             ></MyToyRow>)
                         }
-
                     </tbody>
-
                 </table>
             </div>
         </div>
