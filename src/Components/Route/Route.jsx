@@ -9,6 +9,7 @@ import AllToys from "../Pages/AllToys/AllToys";
 import MyToys from "../Pages/MyToy/MyToys";
 import SignalToyDetails from "../Pages/AllToys/SignalToyDetails/SignalToyDetails";
 import UpdateToy from "../Pages/UpdateToy/UpdateToy";
+import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
     {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/signalDetails/:id' ,
-          element: <SignalToyDetails></SignalToyDetails> ,
+          element:<PrivetRoute> <SignalToyDetails></SignalToyDetails> </PrivetRoute>,
           loader:  ({params}) => fetch(`http://localhost:5000/myAllToys/${params.id}`)
         },
         {

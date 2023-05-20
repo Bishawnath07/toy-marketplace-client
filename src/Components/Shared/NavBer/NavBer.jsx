@@ -20,16 +20,15 @@ const NavBer = () => {
 
   const navItems = <>
     <li><Link to="/">Home</Link> </li>
-    <li> <Link to="/allToys">All Toys</Link> </li>
-    <li> <Link to="/addToy">Add A Toy</Link> </li>
-    <li> <Link to="/">Blogs</Link> </li>
-    
-    {user?.email ? <>
+     {user?.email ? <>
+      <li> <Link to="/addToy">Add A Toy</Link> </li>
       <li><Link to="/myToys">My Toys</Link></li>
       
     </>
       : <li> <Link to="/login"></Link> </li>
     }
+     <li> <Link to="/allToys">All Toys</Link> </li>
+    <li> <Link to="/">Blogs</Link> </li>
   </>
   return (
     <div className="navbar max-w-7xl	mx-auto bg-red-100  p-5  h-20 ">

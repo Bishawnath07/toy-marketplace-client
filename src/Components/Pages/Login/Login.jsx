@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from 'react-icons/fa';
 
 import { AuthContext } from "../../Provider/AuthProviders";
@@ -9,6 +9,10 @@ import app from "../../../firebase/firebase.config";
 const Login = () => {
     const { signIn } = useContext(AuthContext)
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/" ;
+    
 
     const auth = getAuth(app)
     const provider = new GoogleAuthProvider();
@@ -18,7 +22,7 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user)
-            navigate('/')
+            navigate(from , {replace: true})
         })
         .catch(error => {
             console.log(error.message)
@@ -36,7 +40,7 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
-                navigate('/')
+                navigate(from , {replace: true})
             })
             .catch(error => {
                 console.error(error);
