@@ -4,7 +4,7 @@ import { FaGoogle } from 'react-icons/fa';
 
 import { AuthContext } from "../../Provider/AuthProviders";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import app from "../../../firebase/firebase.config";
+import app from "../../../../firebase/firebase.config";
 
 const Login = () => {
     const { signIn } = useContext(AuthContext)

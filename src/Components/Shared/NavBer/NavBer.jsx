@@ -2,7 +2,6 @@ import { useContext } from 'react';
 import img from './image/a6bc59dd3d2c02e80c45e6eb64b439d5-toys-shop-logo.png'
 import { Link } from "react-router-dom";
 import { AuthContext } from '../../Provider/AuthProviders';
-// import { useContext } from "react";
 
 
 
@@ -66,9 +65,7 @@ const NavBer = () => {
         </Link>
       }
      </div>
-      {/* <Link to= '/login' className="navbar-end">
-            <button className="btn btn-outline btn-warning">Login</button>
-            </Link> */}
+     
     </div>
   );
 };
