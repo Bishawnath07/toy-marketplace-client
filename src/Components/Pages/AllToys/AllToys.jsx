@@ -8,11 +8,11 @@ const AllToys = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/myAllToys').then(res => res.json()).then(data => setToys(data))
+        fetch('https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/myAllToys').then(res => res.json()).then(data => setToys(data))
     }, [])
 
     const handleSearch = () => {
-        fetch(`http://localhost:5000/getToyByText/${searchText}`)
+        fetch(`https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/getToyByText/${searchText}`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

@@ -1,10 +1,12 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProviders";
 import Swal from "sweetalert2";
+import useSetTitle from "../../Hook/useSetTitle/useSetTitle";
 
 const AddToy = () => {
     const { user } = useContext(AuthContext);
     const [selects, setSelects] = useState('')
+    useSetTitle('add toy')
 
     const handleAddToy = event => {
         event.preventDefault();
@@ -25,7 +27,7 @@ const AddToy = () => {
 
         console.log(newToy);
 
-        fetch('http://localhost:5000/toys', {
+        fetch('https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/toys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

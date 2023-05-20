@@ -11,7 +11,7 @@ function Tabs() {
     };
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/allToys/${toggleState}`)
+        fetch(`https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/allToys/${toggleState}`)
         .then(res => res.json())
         .then(data => setToys(data))
     } , [toggleState])

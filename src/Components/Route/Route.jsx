@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         {
           path: '/signalDetails/:id' ,
           element:<PrivetRoute> <SignalToyDetails></SignalToyDetails> </PrivetRoute>,
-          loader:  ({params}) => fetch(`http://localhost:5000/myAllToys/${params.id}`)
+          loader:  ({params}) => fetch(`https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/myAllToys/${params.id}`)
         },
         {
           path: '/myToys' ,
@@ -39,13 +39,13 @@ const router = createBrowserRouter([
         {
           path: '/updateToy/:id' ,
           element: <UpdateToy></UpdateToy> ,
-          loader: ({params}) => fetch(`http://localhost:5000/myAllToys/${params.id}`)
+          loader: ({params}) => fetch(`https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/myAllToys/${params.id}`)
           
         },
         {
           path: '/tabToyDetails/:id' ,
           element:<TabToyDetails></TabToyDetails> ,
-          loader: ({params}) => fetch(`http://localhost:5000/myAllToys/${params.id}`)
+          loader: ({params}) => fetch(`https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/myAllToys/${params.id}`)
         },
         {
           path: '/addToy' ,
