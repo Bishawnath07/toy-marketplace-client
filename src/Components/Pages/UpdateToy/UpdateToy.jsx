@@ -75,10 +75,10 @@ const UpdateToy = () => {
                         </div>
                         <div className="form-control md:w-1/2 ml-4">
                             <label className="label">
-                                <span className="label-text">Price</span>
+                                <span className="label-text">Details</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="details" defaultValue={details} placeholder="details" className="input input-bordered w-full" />
+                            <textarea className="textarea textarea-info w-full h-28"  type="text" name="details" defaultValue={details} placeholder="details"></textarea>
                             </label>
                         </div>
                     </div>

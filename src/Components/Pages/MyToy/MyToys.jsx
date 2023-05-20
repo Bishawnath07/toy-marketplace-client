@@ -60,22 +60,24 @@ const MyToys = () => {
 
 
     return (
-        <div>
+        <div className="max-w-6xl mx-auto">
             <h3 className="text-4xl text-center my-8">You have added {toys.length} pieces toys</h3>
             <div className="overflow-x-auto">
                 <table className="table table-compact w-full">
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>#</th>
 
+                            <th>Toy Photo</th>
                             <th>Toy Name</th>
+                            <th>Seller Name</th>
                             <th>Sub-category</th>
                             <th>Price</th>
                             <th>Available Quantity</th>
                             <th>Delete or Update</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="">
                         {
                             toys.map((toy , index) => <MyToyRow
                             key={toy._id}

@@ -10,6 +10,8 @@ import MyToys from "../Pages/MyToy/MyToys";
 import SignalToyDetails from "../Pages/AllToys/SignalToyDetails/SignalToyDetails";
 import UpdateToy from "../Pages/UpdateToy/UpdateToy";
 import PrivetRoute from "./PrivetRoute";
+import Blogs from "../Pages/Blogs/Blogs";
+import TabToyDetails from "../Pages/Home/Tabs/TabToyDetails/TabToyDetails";
 
 const router = createBrowserRouter([
     {
@@ -41,8 +43,17 @@ const router = createBrowserRouter([
           
         },
         {
+          path: '/tabToyDetails/:id' ,
+          element:<TabToyDetails></TabToyDetails> ,
+          loader: ({params}) => fetch(`http://localhost:5000/myAllToys/${params.id}`)
+        },
+        {
           path: '/addToy' ,
           element: <AddToy></AddToy>
+        },
+        {
+          path: '/blog' ,
+          element: <Blogs></Blogs>
         },
         {
           path: '/register' ,

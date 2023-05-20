@@ -21,7 +21,7 @@ const AllToys = () => {
       };
 
     return (
-        <div>
+        <div className="max-w-6xl mx-auto">
             <h3 className="text-5xl text-center my-5 text-cyan-700 font-bold">Here are all the toys</h3>
             <div className="search-box  p-5 my-5 text-center">
           <input
@@ -43,7 +43,7 @@ const AllToys = () => {
                             <th>Category</th>
                             <th>Price</th>
                             <th>Avaiable Quantity</th>
-                            <th>View </th>
+                            <th>View Details</th>
                         </tr>
                     </thead>
                     <tbody>

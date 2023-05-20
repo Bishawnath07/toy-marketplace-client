@@ -1,7 +1,7 @@
 import img from './image/valentine-s-day-children-s-room-with-little-bear-pink-wall-background-3d-rendering 1.png'
 const Banner = () => {
     return (
-        <div className="carousel w-full">
+        <div className="carousel w-full  ">
             <div id="slide1" className="carousel-item relative w-full ">
                 <div className='absolute lg:top-20 ml-8 lg:w-2/5'>
                     <h2 className='text-xl  md:text-5xl font-bold '>Cute <span className='text-red-300'>Toys</span> for <br /> Cute <span className='text-red-300'>Kids</span></h2>

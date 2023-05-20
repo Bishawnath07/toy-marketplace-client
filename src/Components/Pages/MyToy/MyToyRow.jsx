@@ -1,16 +1,29 @@
 import { Link } from "react-router-dom";
 
 const MyToyRow = ({ toy, index, handleDelete }) => {
-    const { _id, name, category, price, quantity } = toy;
+    const { _id, name, category, price,photo , seller , quantity } = toy;
 
     return (
         <tr className="w-100%">
             <th>{index + 1} </th>
 
-            <td className="text-xl">{name}</td>
-            <td className="text-xl">{category}</td>
+            <td>
+            <div className="flex items-center space-x-3">
+            <div className="avatar">
+              <div className="mask mask-squircle w-12 h-12">
+                <img src={photo} alt="Avatar Tailwind CSS Component" />
+              </div>
+            </div>
+            <div>
+            
+            </div>
+          </div>
+            </td>
+            <td className="text-xl text-indigo-600 font-bold">{name}</td>
+            <td className="text-xl text-indigo-600 font-bold">{seller}</td>
+            <td className="text-xl text-indigo-400 font-semibold">{category}</td>
             <td className="text-xl">${price}</td>
-            <td className="text-xl"> {quantity} <span className=" text-pink-500"> pieces in avaiable</span></td>
+            <td className="text-xl"> {quantity} <span className=" "> pieces in avaiable</span></td>
 
 
             <button onClick={() => handleDelete(_id)} className="btn btn-success my-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

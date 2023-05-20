@@ -7,12 +7,12 @@ const AllToyRow = ({toy , index}) => {
        
              <tr>
                             <th>{index + 1}</th>
-                            <td>{seller} </td>
-                            <td>{name}</td>
-                            <td>{category}</td>
-                            <td>{price}</td>
-                            <td>{quantity}</td>
-                            <td><Link to={`/signalDetails/${_id}`}><button className="btn">view details</button></Link></td>
+                            <td className="text-2xl font-bold text-green-900">{seller} </td>
+                            <td className="text-xl font-bold text-green-900">{name}</td>
+                            <td className="text-xl font-semibold text-green-900">{category}</td>
+                            <td className="text-xl font-semibold text-green-900">${price}</td>
+                            <td className="text-xl font-semibold text-green-900">{quantity}</td>
+                            <td><Link to={`/signalDetails/${_id}`}><button className="btn">Details</button></Link></td>
                         </tr>
     );
 };
