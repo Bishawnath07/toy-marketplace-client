@@ -1,5 +1,5 @@
 import { Link, useNavigate, useRouteError } from 'react-router-dom'
-import img from './image/istockphoto-1011988208-612x612.jpg'
+import img from './image/error page.jpg'
 
 
 const ErrorPage = () => {
