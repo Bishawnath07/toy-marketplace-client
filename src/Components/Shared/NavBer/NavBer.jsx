@@ -53,8 +53,9 @@ const NavBer = () => {
           {navItems}
         </ul>
       </div>
-     <div className='gap-10'>
-     {user?.email ? <>
+     <div className=''>
+      <ul className='flex justify-center items-center gap-4'>
+      {user?.email ? <>
         <div className="tooltip  tooltip-left flex justify-between items-center ml-16 " data-tip={user && user.displayName}>
            <img className='rounded-xl h-10 w-20' src={user.photoURL} alt="" />
           </div>
@@ -64,6 +65,7 @@ const NavBer = () => {
         <button className="btn  btn-warning">Login</button>
         </Link>
       }
+      </ul>
      </div>
      
     </div>
