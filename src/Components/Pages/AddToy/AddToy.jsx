@@ -2,12 +2,15 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProviders";
 import Swal from "sweetalert2";
 import useSetTitle from "../../Hook/useSetTitle/useSetTitle";
+import { useNavigate } from "react-router-dom";
 
 const AddToy = () => {
     const { user } = useContext(AuthContext);
     const [selects, setSelects] = useState('')
     useSetTitle('add toy')
+    const navigate = useNavigate();
 
+   
     const handleAddToy = event => {
         event.preventDefault();
 
@@ -44,6 +47,7 @@ const AddToy = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
+                    navigate('/myToys')
                     form.reset()
                 }
             })

@@ -1,11 +1,13 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useSetTitle from "../../Hook/useSetTitle/useSetTitle";
 
 const UpdateToy = () => {
+    useSetTitle('Update Toy')
     const toyDetalis = useLoaderData();
     const {_id , name, price, quantity, details } = toyDetalis;
-    useSetTitle('Update Toy')
+    const navigate = useNavigate()
+
 
     const handleUpdateToy = event => {
         event.preventDefault();
@@ -38,6 +40,7 @@ const UpdateToy = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
+                    navigate('/myToys')
                 }
             })
     }
