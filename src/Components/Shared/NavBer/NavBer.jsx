@@ -30,7 +30,7 @@ const NavBer = () => {
     <li> <Link to="/blog">Blogs</Link> </li>
   </>
   return (
-    <div className="navbar max-w-7xl	mx-auto md:p-5  h-20 ">
+    <div className="navbar  md:p-5  h-20 ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

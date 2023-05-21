@@ -19,7 +19,7 @@ function Tabs() {
     
 
     return (
-        <div className="containers max-w-6xl md:mx-auto">
+        <div className="containers">
             <div className="bloc-tabs">
                 <button
                     className={toggleState === "teddy bear " ? "tabs active-tabs" : "tabs"}

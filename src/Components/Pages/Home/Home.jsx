@@ -9,13 +9,13 @@ import Tabs from "./Tabs/Tabs";
 const Home = () => {
     useSetTitle('Home')
     return (
-        <div className="">
+        <div className="min-w-min	">
             <Banner></Banner>
             <ToyGallery></ToyGallery>
             <Gellary></Gellary>
             <Tabs></Tabs>
             <Tranding></Tranding>
-            <LatestBlog></LatestBlog>
+            <LatestBlog></LatestBlog> 
         </div>
     );
 };

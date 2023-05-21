@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const useSetTitle = title =>{
+const useSetTitle = title => {
     useEffect(() => {
         document.title = `${title} - Toys Shop Store`;
     } , [title])

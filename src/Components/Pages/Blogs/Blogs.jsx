@@ -4,7 +4,7 @@ import useSetTitle from "../../Hook/useSetTitle/useSetTitle";
 const Blogs = () => {
     useSetTitle('Blogs')
     return (
-        <div className="max-w-5xl mx-auto my-10">
+        <div className="max-w-5xl mx-auto my-10 bg-slate-200 p-5 rounded-lg">
             <h1 className="text-4xl my-10 font-bold text-center text-red-700">Here are answers to all questions</h1>
             <h2 className="text-4xl font-bold text-lime-800 mb-5">1. What is an access token and refresh token? </h2>
             < p className="text-lg "><span className="text-lime-700">Answer: </span> A refresh token just helps you re-validate a user without them having to re-enter their login credentials multiple times. The access token is re-issued, provided the refresh token is a valid one requesting permission to access confidential resources.</p>

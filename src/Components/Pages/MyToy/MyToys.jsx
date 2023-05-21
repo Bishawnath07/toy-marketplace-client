@@ -4,18 +4,18 @@ import MyToyRow from "./MyToyRow";
 import Swal from "sweetalert2";
 import useSetTitle from "../../Hook/useSetTitle/useSetTitle";
 
+
 const MyToys = () => {
     useSetTitle('My Toys')
 
     const { user } = useContext(AuthContext);
     const [toys, setToys] = useState([]);
     console.log(toys)
-    const DEFAULT_LIMIT = 8;
+
 
     useEffect(() => {
-        fetch(`https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/myToys/${user?.email}` , {
-            params: { limit: DEFAULT_LIMIT }
-        })
+        
+        fetch(`https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/myToys/${user?.email}` )
             .then((res) => res.json())
             .then((data) => {
 
@@ -67,6 +67,7 @@ const MyToys = () => {
     return (
         <div className="max-w-6xl mx-auto">
             <h3 className="text-4xl text-center my-8">You have added {toys.length} pieces toys</h3>
+            
             <div className="overflow-x-auto">
                 <table className="table table-compact w-full">
                     <thead>
