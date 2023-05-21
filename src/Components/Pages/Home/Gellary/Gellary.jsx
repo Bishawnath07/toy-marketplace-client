@@ -23,92 +23,92 @@ const Gellary = () => {
         <div>
             {/* <h2 className='text-4xl text-green-800 font-bold text-center my-10'>Here are Toys Gallery</h2> */}
             <div className='grid grid-cols-3 md:grid-cols-6 gap-10 md:gap-5 max-w-6xl mx-10 md:mx-auto mt-8 border-sky-300 border-2  p-10 rounded-xl'>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img1} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img2} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img3} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img4} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img5} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img6} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img7} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img8} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img9} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img10} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img11} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img12} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img13} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img14} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img15} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img16} />
                     </div>
                 </div>
-                <div className="avatar ">
+                <div className="avatar " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img17} />
                     </div>
                 </div>
-                <div className="avatar  ">
+                <div className="avatar  " data-aos="zoom-in">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img18} />
                     </div>
