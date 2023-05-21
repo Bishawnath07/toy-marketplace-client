@@ -2,15 +2,20 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProviders";
 import MyToyRow from "./MyToyRow";
 import Swal from "sweetalert2";
+import useSetTitle from "../../Hook/useSetTitle/useSetTitle";
 
 const MyToys = () => {
+    useSetTitle('My Toys')
 
     const { user } = useContext(AuthContext);
     const [toys, setToys] = useState([]);
     console.log(toys)
+    const DEFAULT_LIMIT = 8;
 
     useEffect(() => {
-        fetch(`https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/myToys/${user?.email}`)
+        fetch(`https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/myToys/${user?.email}` , {
+            params: { limit: DEFAULT_LIMIT }
+        })
             .then((res) => res.json())
             .then((data) => {
 

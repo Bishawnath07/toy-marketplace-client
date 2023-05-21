@@ -1,3 +1,4 @@
+import useSetTitle from "../../Hook/useSetTitle/useSetTitle";
 import Banner from "../Banner/Banner";
 import LatestBlog from "../LatestBlog/LatestBlog";
 import ToyGallery from "../ToyGallery/ToyGallery";
@@ -6,6 +7,7 @@ import Gellary from "./Gellary/Gellary";
 import Tabs from "./Tabs/Tabs";
 
 const Home = () => {
+    useSetTitle('Home')
     return (
         <div className="">
             <Banner></Banner>

@@ -1,9 +1,11 @@
 import { useLoaderData } from "react-router-dom";
+import useSetTitle from "../../../Hook/useSetTitle/useSetTitle";
 
 const SignalToyDetails = () => {
     const toyDetails = useLoaderData();
     const { name, price ,  quantity,seller, photo , email , rating , details} = toyDetails;
     
+    useSetTitle('Toy Details')
 
     return (
       <div className="card w-2/3 mx-auto mt-8 lg:card-side bg-base-100 shadow-xl">

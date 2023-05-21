@@ -2,10 +2,12 @@ import {  useContext} from 'react';
 import { Link } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../Provider/AuthProviders';
+import useSetTitle from '../../Hook/useSetTitle/useSetTitle';
 
 const Register = () => {
     const {  createUser , updateProfileAndPhoto } = useContext(AuthContext);
     console.log(createUser);
+    useSetTitle('Register')
     
 
 

@@ -1,9 +1,11 @@
 import { useLoaderData } from "react-router-dom";
+import useSetTitle from "../../../../Hook/useSetTitle/useSetTitle";
 
 const TabToyDetails = () => {
     const toyDetail = useLoaderData()
     const { name, price ,  quantity,seller, photo , email , rating , details} = toyDetail;
     console.log(toyDetail)
+    useSetTitle('Tab Toy Details')
     return (
         <div className="card w-2/3 mx-auto mt-8 lg:card-side bg-base-100 shadow-xl">
         <figure ><img  src={photo} alt="Album"/></figure>

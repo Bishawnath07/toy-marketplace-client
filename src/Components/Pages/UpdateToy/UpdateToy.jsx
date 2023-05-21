@@ -1,9 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import useSetTitle from "../../Hook/useSetTitle/useSetTitle";
 
 const UpdateToy = () => {
     const toyDetalis = useLoaderData();
     const {_id , name, price, quantity, details } = toyDetalis;
+    useSetTitle('Update Toy')
 
     const handleUpdateToy = event => {
         event.preventDefault();
