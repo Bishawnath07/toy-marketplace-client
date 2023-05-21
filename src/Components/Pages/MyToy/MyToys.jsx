@@ -15,7 +15,7 @@ const MyToys = () => {
 
     useEffect(() => {
         
-        fetch(`https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/myToys/${user?.email}` )
+        fetch(`https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/myToys/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
 

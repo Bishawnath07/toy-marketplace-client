@@ -1,11 +1,15 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import useSetTitle from "../../../../Hook/useSetTitle/useSetTitle";
 
 const TabToyDetails = () => {
-    const toyDetail = useLoaderData()
+  useSetTitle('Tab Toy Details')
+    const toyDetail = useLoaderData() ;
+    const navigate = useNavigate()
     const { name, price ,  quantity,seller, photo , email , rating , details} = toyDetail;
     console.log(toyDetail)
-    useSetTitle('Tab Toy Details')
+    const handleGoBack = () =>{
+      navigate("/")
+    }
     return (
         <div className="card w-2/3 mx-auto mt-8 lg:card-side bg-base-100 shadow-xl">
         <figure ><img  src={photo} alt="Album"/></figure>
@@ -17,7 +21,7 @@ const TabToyDetails = () => {
           <p className="text-green-800 font-semibold">rating : {rating}</p>
           <p className="text-green-800 font-semibold">Avaiable Quantity : {quantity} piece</p>
           <p className="text-green-800 font-semibold">Details Description : {details}</p>
-        
+          <button  onClick={handleGoBack} className="btn btn-accent mt-3">Back</button>
         </div>
       </div>
     );

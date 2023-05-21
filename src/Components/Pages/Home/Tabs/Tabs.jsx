@@ -19,6 +19,8 @@ function Tabs() {
     
 
     return (
+            <div className="mt-16">
+                <h2 className="text-5xl font-bold text-orange-900 text-center">You can view the toy as per <br /> your choice here</h2>
         <div className="containers">
             <div className="bloc-tabs">
                 <button
@@ -76,6 +78,7 @@ function Tabs() {
                 }
                </div>
         </div>
+            </div>
     );
 }
 
