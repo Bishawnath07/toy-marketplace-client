@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/tabToyDetails/:id' ,
-          element:<TabToyDetails></TabToyDetails> ,
+          element:<PrivetRoute><TabToyDetails></TabToyDetails></PrivetRoute> ,
           loader: ({params}) => fetch(`https://b7a11-toy-marketplace-server-side-bishawnath07.vercel.app/myAllToys/${params.id}`)
         },
         {
