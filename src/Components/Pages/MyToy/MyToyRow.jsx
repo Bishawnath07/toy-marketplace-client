@@ -19,11 +19,11 @@ const MyToyRow = ({ toy, index, handleDelete }) => {
             </div>
           </div>
             </td>
-            <td className="text-xl text-indigo-600 font-bold">{name}</td>
-            <td className="text-xl text-indigo-600 font-bold">{seller}</td>
-            <td className="text-xl text-indigo-400 font-semibold">{category}</td>
-            <td className="text-xl">${price}</td>
-            <td className="text-xl"> {quantity} <span className=" "> pieces in avaiable</span></td>
+            <td className="text-[14px] md:text-xl text-indigo-600 font-bold">{name}</td>
+            <td className="text-[14px] md:text-xl text-indigo-600 font-bold">{seller}</td>
+            <td className="text-[14px] md:text-xl text-indigo-400 font-semibold">{category}</td>
+            <td className="text-[14px] md:text-xl">${price}</td>
+            <td className="text-[14px] md:text-xl"> {quantity} <span className=" "> pieces in avaiable</span></td>
 
 
             <button onClick={() => handleDelete(_id)} className="btn btn-success my-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

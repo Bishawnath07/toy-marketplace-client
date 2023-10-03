@@ -74,13 +74,13 @@ const MyToys = () => {
                         <tr>
                             <th>#</th>
 
-                            <th>Toy Photo</th>
-                            <th>Toy Name</th>
-                            <th>Seller Name</th>
-                            <th>Sub-category</th>
-                            <th>Price</th>
-                            <th>Available Quantity</th>
-                            <th>Delete or Update</th>
+                            <th className="text-[8px]  md:text-[14px] ">Toy Photo</th>
+                            <th className="text-[8px]  md:text-[14px] ">Toy Name</th>
+                            <th className="text-[8px]  md:text-[14px] ">Seller Name</th>
+                            <th className="text-[8px]  md:text-[14px] ">Sub-category</th>
+                            <th className="text-[8px]  md:text-[14px] ">Price</th>
+                            <th className="text-[8px]  md:text-[14px] ">Available Quantity</th>
+                            <th className="text-[8px]  md:text-[14px] ">Delete or Update</th>
                         </tr>
                     </thead>
                     <tbody className="">
